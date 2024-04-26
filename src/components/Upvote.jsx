@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { supabase } from "../api";
 import "./Upvote.css"
 
+// eslint-disable-next-line react/prop-types
 function Upvote({ id, upvotes }) {
     const [upvoteCount, setUpvoteCount] = useState(upvotes);
     useEffect(() => {setUpvoteCount(upvotes)}, [upvotes])

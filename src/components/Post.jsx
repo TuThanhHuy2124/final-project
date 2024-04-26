@@ -1,6 +1,7 @@
 import Upvote from "./Upvote"
 import "./Post.css"
 
+// eslint-disable-next-line react/prop-types
 function Post({ id, title, upvotes, created_at }) {
     return (
         <div className="post">
