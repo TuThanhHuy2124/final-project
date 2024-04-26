@@ -36,11 +36,14 @@ function PostDetail() {
         console.log(e)
         const comment = e.target[0].value;
         const newComments = [...comments, comment];
-        if(comment !== "") {setComments(newComments)}
-        await supabase
-             .from("Posts")
-             .update({ comments: newComments })
-             .eq("id", id)
+        if(comment !== "") {
+            setComments(newComments)
+            await supabase
+                 .from("Posts")
+                 .update({ comments: newComments })
+                 .eq("id", id)
+        }
+        e.target[0].value = "";
     }
 
     const deletePost = async (e) => {

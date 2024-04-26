@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { supabase } from "../api";
+import "./Upvote.css"
 
 function Upvote({ id, upvotes }) {
     const [upvoteCount, setUpvoteCount] = useState(upvotes);
@@ -18,7 +19,7 @@ function Upvote({ id, upvotes }) {
 
     return (
         <div className="upvote-container">
-            <p>Upvote:</p>
+            <p>Upvote: </p>
             <button className="upvote" onClick={handleUpvote}>{upvoteCount}</button>
         </div>
     )

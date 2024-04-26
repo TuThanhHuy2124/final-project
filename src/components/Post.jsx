@@ -1,4 +1,5 @@
 import Upvote from "./Upvote"
+import "./Post.css"
 
 function Post({ id, title, upvotes, created_at }) {
     return (

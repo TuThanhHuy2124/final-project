@@ -1,0 +1,21 @@
+.navbar {
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar > * {
+    margin: 0px 30px 0px 20px;
+}
+nav {
+    font-size: var(--second-font-size);
+    width: var(--nav-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,34 @@
+.searchbar {
+    font-size: var(--first-font-size);
+    position: fixed;
+    top: var(--half-header-height);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    border-radius: 10px;
+}
+
+.home-page,
+.order-selection-container,
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-selection-container,
+.posts {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.order-selection-container {
+    margin: 15px 0px 15px 0px;
+}
+
+.posts {
+    width: 100vw;
+    flex-wrap: wrap;
+}
+

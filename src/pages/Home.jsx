@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { supabase } from "../api"
 import Post from "../components/Post"
+import "./Home.css"
 
 export const modifyDate = (dateStr) => {
         const date = new Date(dateStr);
@@ -10,8 +11,8 @@ export const modifyDate = (dateStr) => {
 
 function Home() {
     const [orderByCreatedTime, setOrderByCreatedTime] = useState(true);
-    const [posts, setPosts] = useState([]);
     const [filteredPosts, setFilteredPosts] = useState([]);
+    const [posts, setPosts] = useState([]);
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -50,25 +51,27 @@ function Home() {
     }
 
     return (
-        <>
-        <input className="search-bar" placeholder="Search" onChange={search}></input>
-        <div className="order-selection-container">
-            <p>Order By: </p>
-            <button className={"created-time-option"} onClick={(e) => {
-                e.preventDefault();
-                setOrderByCreatedTime(true);
-            }}>Created Time</button>
-            <button className="upvotes-button" onClick={(e) => {
-                e.preventDefault();
-                setOrderByCreatedTime(false);
-            }}>Upvotes</button>
+        <div className="home-page">
+            <input className="searchbar" placeholder="Search" onChange={search}></input>
+            <div className="order-selection-container">
+                <p>Order By: </p>
+                <button className={"created-time-option"} onClick={(e) => {
+                    e.preventDefault();
+                    setOrderByCreatedTime(true);
+                }}>Created Time</button>
+                <button className="upvotes-button" onClick={(e) => {
+                    e.preventDefault();
+                    setOrderByCreatedTime(false);
+                }}>Upvotes</button>
+            </div>
+            <div className="posts">
+                {filteredPosts.map((data, i) => <Post key={i} 
+                                            id={data.id}
+                                            title={data.title}
+                                            upvotes={data.upvotes}
+                                            created_at={modifyDate(data.created_at)}/>)}
+            </div>
         </div>
-        {filteredPosts.map((data, i) => <Post key={i} 
-                                      id={data.id}
-                                      title={data.title}
-                                      upvotes={data.upvotes}
-                                      created_at={modifyDate(data.created_at)}/>)}
-        </>
     )
 }
 

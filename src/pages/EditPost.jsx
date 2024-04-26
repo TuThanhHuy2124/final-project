@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../api";
 import { useParams } from "react-router-dom";
+import "./Post.css"
 
-function Edit() {
+function EditPost() {
     const { id } = useParams()
     const [data, setData] = useState({
         id: null,
@@ -44,14 +45,13 @@ function Edit() {
     }
 
     return (
-        <form onSubmit={handleForm}>
-            <label htmlFor="title-input">Title:</label>
+        <form className="edit-post-container" onSubmit={handleForm}>
+            <h2>Edit your post</h2>
             <input type="text" className="title-input" name="title-input" placeholder={data.title}/>
-            <label htmlFor="context-input">Additional Details:</label>
-            <input type="text" className="context-input" name="context-input" placeholder={data.context}/>
+            <textarea type="text" className="context-input" name="context-input" placeholder={data.context}/>
             <button>Edit</button>
         </form>
     )
 }
 
-export default Edit
+export default EditPost

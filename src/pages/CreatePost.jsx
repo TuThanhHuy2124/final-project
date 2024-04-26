@@ -1,9 +1,7 @@
-import { useState } from "react"
 import { supabase } from "../api";
+import "./Post.css"
 
 function CreatePost() {
-    const [title, setTitle] = useState("");
-    const [context, setContext] = useState("");
     
     const setPostInfo = async (title, context) => {
         if(title === "" || context === "") { window.alert("Missing information"); }
@@ -23,11 +21,10 @@ function CreatePost() {
     }
 
     return (
-        <form onSubmit={handleForm}>
-            <label htmlFor="title-input">Title:</label>
-            <input type="text" className="title-input" name="title-input"/>
-            <label htmlFor="context-input">Additional Details:</label>
-            <input type="text" className="context-input" name="context-input"/>
+        <form className="create-post-container" onSubmit={handleForm}>
+            <h2>Create your post</h2>
+            <input type="text" className="title-input" placeholder="Title"/>
+            <textarea type="text" className="context-input" placeholder="Details (Optional)"/>
             <button>Submit</button>
         </form>
     )
