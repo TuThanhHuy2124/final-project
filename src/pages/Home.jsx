@@ -29,7 +29,6 @@ function Home() {
                                     .select()
                                     .order('upvotes', {ascending: false});
             }
-            console.log(fetchedPosts);
             setPosts(fetchedPosts.data);
             setFilteredPosts(fetchedPosts.data);
         }
