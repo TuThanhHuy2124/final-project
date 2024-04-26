@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import CreatePost from './pages/CreatePost'
 import Layout from './pages/Layout'
 import Home from './pages/Home'
-import './App.css'
 import PostDetail from './pages/PostDetails'
 import EditPost from './pages/EditPost'
 
