@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { supabase } from "../api"
 import { modifyDate } from "./Home"
 import Upvote from "../components/Upvote"
+import "./PostDetails.css"
 
 function PostDetail() {
     const { id } = useParams();
@@ -60,24 +61,28 @@ function PostDetail() {
         <>
         {
             (data.created_at !== null) &&
-            <div className="post">
-                <div className="modify-post">
-                    <button className="delete-post-button" onClick={deletePost}>Delete</button>
-                    <Link to={"/edit/" + id}>
-                        <button className="edit-post-button">Edit</button>
-                    </Link>
-                </div>
-                <p>{modifyDate(data.created_at)}</p>
-                <h2 className="title">{data.title}</h2>
-                <h3 className="context">{data.context}</h3>
-                <Upvote id={id} upvotes={data.upvotes}/>
-                <div className="comment-section">
-                    <h3 className="comment-title">Comments:</h3>
-                    {comments.map((comment, i) => <p key={i} className="comment">{"- " + comment}</p>)}
-                    <form onSubmit={postComment}>
-                        <input placeholder="Comment"></input>
-                        <button>Post</button>
-                    </form>
+            <div className="center-setter">
+                <div className="post-details-container">
+                    <div className="modify-post">
+                        <button className="delete-post-button" onClick={deletePost}>Delete</button>
+                        <Link to={"/edit/" + id}>
+                            <button className="edit-post-button">Edit</button>
+                        </Link>
+                    </div>
+                    <p className="date">{modifyDate(data.created_at)}</p>
+                    <h2 className="title-details">{data.title}</h2>
+                    <h3 className="context-details">{data.context}</h3>
+                    <Upvote id={id} upvotes={data.upvotes}/>
+                    <div className="response-section">
+                        <h3 className="comment-title">Comments:</h3>
+                        <ul className="comments-container">
+                            {comments.map((comment, i) => <li key={i} className="comment">{comment}</li>)}
+                        </ul>
+                        <form className="comment-area" onSubmit={postComment}>
+                            <textarea placeholder="Comment"></textarea>
+                            <button>Post</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         }

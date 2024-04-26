@@ -1,25 +1,42 @@
 * {
+  color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   --header-height: 10vh;
   --half-header-height: 5vh;
-  --non-header-height: 90vh;
-  --nav-width: 20vw;
+  --non-header-height: 89vh;
   --first-font-size: 1.5em;
   --second-font-size: 1.25em;
   --info-input-width: 80vw;
   --context-input-height: 55vh;
+  --header-color: #153448;
+  --background-color: #DFD0B8;
+  --button-height: 6vh;
+  --button-width: 7vw;
+  --post-font-size: 1vw;
+  --post-background-color: #3C5B6F;
+  --post-background-shadow-color: #1e4b69;
+  --post-dimension: 15vw;
+  --post-details-width: 95vw;
+  --post-details-height: 75vh;
 }
 
 body {
+  background-color: var(--background-color);
+  height: var(--non-header-height);
   margin-top: var(--header-height);
+
 }
 
 button {
   cursor: pointer;
+  color: black;
   padding: 10px;
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
-  background-color: #ECF2FF;
-  box-shadow: 2px 2px 3px;
+  background-color: #fafafa;
+  box-shadow: 2px 2px 3px black;
   border: none;
   outline: 0px solid black;
   transition: outline 0.1s;
@@ -33,4 +50,8 @@ button:hover{
   outline: 2px solid black;
   outline-offset: -2px;
   transition: 0.1s;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }

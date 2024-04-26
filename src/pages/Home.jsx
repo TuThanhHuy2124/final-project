@@ -59,7 +59,7 @@ function Home() {
                     e.preventDefault();
                     setOrderByCreatedTime(true);
                 }}>Created Time</button>
-                <button className="upvotes-button" onClick={(e) => {
+                <button className="upvotes-option" onClick={(e) => {
                     e.preventDefault();
                     setOrderByCreatedTime(false);
                 }}>Upvotes</button>

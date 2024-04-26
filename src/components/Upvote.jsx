@@ -19,7 +19,7 @@ function Upvote({ id, upvotes }) {
 
     return (
         <div className="upvote-container">
-            <p>Upvote: </p>
+            <p>❤️</p>
             <button className="upvote" onClick={handleUpvote}>{upvoteCount}</button>
         </div>
     )

@@ -11,6 +11,17 @@
     font-size: var(--second-font-size);
     width: var(--info-input-width);
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: var(--post-background-color);
+}
+.create-post-container > h2,
+.edit-post-container > h2 {
+    color: black
+}
+.create-post-container > button,
+.edit-post-container > button {
+    width: var(--button-width);
+    height: var(--button-height);
 }
 .context-input {
     padding-bottom: var(--context-input-height);

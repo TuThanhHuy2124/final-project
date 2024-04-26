@@ -1,6 +1,14 @@
 .upvote-container {
     display: flex;
+    width: 6vw;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-size: var(--post-font-size);
+}
+.upvote {
+    margin-left: 0.5vw;
+    height: 50%;
+    width: 200%;
+    padding: 0px 10% 0px 10%; 
 }

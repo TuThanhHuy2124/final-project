@@ -1,5 +1,5 @@
 .navbar {
-    background-color: red;
+    background-color: var(--header-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -14,8 +14,19 @@
 }
 nav {
     font-size: var(--second-font-size);
-    width: var(--nav-width);
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+nav > a {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    padding: 0px 15px 0px 15px;
+}
+nav > a:hover {
+    background-color: #bfd7e73f;
+    transition: 0.25s;
 }

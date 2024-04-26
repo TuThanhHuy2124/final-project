@@ -1,0 +1,71 @@
+.post-details-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--post-details-height);
+    width: var(--post-details-width);
+    background-color: var(--post-background-color);
+    border-radius: 10px;
+}
+.post-details-container > .upvote-container {
+    position: absolute;
+}
+
+.modify-post {
+    font-size: var(--post-font-size);
+    display: flex;
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+}
+.date {
+    font-size: var(--post-font-size);
+    position: absolute;
+    left: 1vw;
+}
+.title-details {
+    font-size: 2.5vw;
+    padding-top: 3vh;
+    width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+.context-details {
+    font-size: 2vw;
+    width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+.response-section {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--header-color);
+    font-size: var(--post-font-size);
+}
+
+.comment-title {
+    margin: 0;
+}
+.comments-container {
+    max-height: 10vh;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    list-style-type: "- ";
+}
+.comment-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+.comment-area > textarea {
+    margin: 0;
+    width: 100%;
+}
+.comment-area > button {
+    height: var(--button-height);
+    width: var(--button-width);
+}

@@ -6,10 +6,15 @@
     transform: translate(-50%, -50%);
     width: 30vw;
     border-radius: 10px;
+    color: black;
+}
+.searchbar::placeholder {
+    color: gray;
 }
 
 .home-page,
 .order-selection-container,
+.center-setter,
 .posts {
     display: flex;
     flex-direction: column;
@@ -25,6 +30,13 @@
 
 .order-selection-container {
     margin: 15px 0px 15px 0px;
+    width: 30vw;
+}
+.order-selection-container > * {
+    font-size: var(--post-font-size);
+}
+.order-selection-container > p {
+    color: black;
 }
 
 .posts {
@@ -32,3 +44,12 @@
     flex-wrap: wrap;
 }
 
+.center-setter {
+    margin-top: var(--header-height);
+    height: var(--non-header-height);
+}
+
+.created-time-option,
+.upvotes-option {
+    width: 30%;
+}
