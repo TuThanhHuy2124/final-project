@@ -36,7 +36,7 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![](https://github.com/TuThanhHuy2124/final-project/blob/main/public/final-project.gif)
+![](https://github.com/TuThanhHuy2124/Task-and-Canvas/blob/main/public/task-and-canvas.gif)
 
 ## Notes
 
